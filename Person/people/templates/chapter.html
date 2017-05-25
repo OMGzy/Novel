@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ novel.novelname }}
+{% endblock %}
+
+{% block novels %}
+    {% for chapter in chapters %}
+        <li>
+        <a href="{% url 'chapter_list' chapter.chapterid %}">{{ chapter.title }}</a>
+        </li>
+    {% endfor %}
+
+{% endblock %}

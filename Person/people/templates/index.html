@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %}
+免费小说网首页
+{% endblock %}
+{% block novels %}
+    {% for novel in novels %}
+        <li><a href="{% url 'novel_list' novel.novelid %}">{{ novel.novelname }}</a></li>
+    {% endfor %}
+
+{% endblock %}
+{% block footer %}
+    <br>这个网站由本人开发
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ chapter.title }}
+{% endblock %}
+
+{% block novels %}
+    {{ chapter.content | safe}}
+{% endblock %}
